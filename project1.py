@@ -4,8 +4,7 @@ from telegram import ReplyKeyboardMarkup, KeyboardButton
 def start(update, context):
     first_name = update.message.from_user.first_name
     update.message.reply_text(
-        text=f"Salom, <b>{first_name}</b>! Botimizga xush kelibsiz!", 
-        parse_mode="HTML")
+        text=f"Salom, {first_name}! Botimizga xush kelibsiz!")
     buttons = [
         [KeyboardButton(text="🇺🇿 O'zbek tili"), KeyboardButton(text="🇷🇸 Русский язык")]
     ]
