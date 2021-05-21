@@ -3,7 +3,8 @@ from telegram import ReplyKeyboardMarkup, KeyboardButton
 
 def start(update, context):
     first_name = update.message.from_user.first_name
-    update.message.reply_text(text=f"Salom, {first_name}! Botimizga xush kelibsiz!")
+    update.message.reply_text(
+        text=f"Salom, {first_name}! Botimizga xush kelibsiz!")
     buttons = [
         [KeyboardButton(text="🇺🇿 O'zbek tili"), KeyboardButton(text="🇷🇸 Русский язык")]
     ]
@@ -11,6 +12,7 @@ def start(update, context):
         text="Marhamat tilni tanlang:\n\nПожалуйста, выберите язык:",
         reply_markup = ReplyKeyboardMarkup(buttons, resize_keyboard=True)
     )
+    
 def back(update, context):
     buttons = [
         [KeyboardButton(text="🇺🇿 O'zbek tili"), KeyboardButton(text="🇷🇸 Русский язык")]
